@@ -1,0 +1,9 @@
+# node_modules directory
+node_modules/
+
+# Cypress binary cache
+.cypress/
+
+# Cypress generated files
+/cypress/videos/
+/cypress/screenshots/

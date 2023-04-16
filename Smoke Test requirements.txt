@@ -1,0 +1,19 @@
+A smoke test is a quick and simple check to determine whether the website is functional and free of major issues that could impact the user experience.
+In this test, testers typically focus on the most critical functionalities of the website, such as product search, add to cart, checkout, and payment processing.
+In the following sections, we'll take a closer look at what a smoke test for an e-commerce website should include:
+
+    -Homepage: Ensure that the homepage loads properly and all links and buttons work as expected.
+
+    -Search functionality: Verify that the search bar works correctly and produces accurate search results.
+
+    -Product page: Check that the product page displays all relevant information, including product details, images, reviews, and pricing.
+
+    -Cart and checkout: Test the cart and checkout process to ensure that customers can add items to their cart, view their cart, and successfully complete a purchase.
+
+    -Payment gateway: Test that the payment gateway is functioning correctly and that customers can complete transactions using various payment methods.
+
+    -User accounts: Verify that customers can create accounts, log in, and view their order history and account information.
+
+    -Shipping and tax calculations: Test that shipping and tax calculations are accurate and that the correct amount is added to the final purchase price.
+
+    -Mobile responsiveness: Check that the website is mobile-responsive and displays correctly on various devices.
