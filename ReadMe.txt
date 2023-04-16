@@ -1,7 +1,7 @@
 This is a test automation project for an e-commerce website, using Cypress as the testing framework. The purpose of this project is to ensure the functionality and reliability of the website by automating the testing process.
 
 Installation:
-    Clone the repository: git clone https://github.com/your-repo.git
+    Clone the repository: git clone https://github.com/Aldin2022/HulkApps-automation-tasks.git
     Install dependencies: npm install
 
 Configuration:
