@@ -27,10 +27,9 @@
 //This is command for entering a website password
 Cypress.Commands.add('WebsiteLogin', () => {
     cy.get('#password')
-    .should('be.visible')
-    .type('brauff')
-
+        .should('be.visible')
+        .type('brauff')
     cy.get('button')
-    .should('be.visible')
-    .click()
+        .should('be.visible')
+        .click()
 })

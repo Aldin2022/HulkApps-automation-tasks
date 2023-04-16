@@ -42,15 +42,15 @@ describe('Test Login functionality using invalid data', () => {
       .and('contain.text', 'Sign in')
       .click()
 
-      /*Check if the error message is displayed due to entering invalid data
-      IMPORTANT**
+    /*Check if the error message is displayed due to entering invalid data
+    IMPORTANT**
       this part could fail because in some cases captcha is activated and it is required to finish SignIn process.
-      */
-      cy.get('.form__message')
+    */
+    cy.get('.form__message')
       .should('be.visible')
       .contains('Please adjust the following')
 
-      cy.get('div[class="errors"] ul li')
+    cy.get('div[class="errors"] ul li')
       .should('be.visible')
       .contains('Incorrect email or password.')
   })

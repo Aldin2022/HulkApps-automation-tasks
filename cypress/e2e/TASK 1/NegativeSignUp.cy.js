@@ -1,5 +1,4 @@
 describe('Testing SignUp functionality', () => {
-
   beforeEach(() => {
     //Visiting Homepage
     cy.visit('/')
@@ -23,28 +22,26 @@ describe('Testing SignUp functionality', () => {
 
     // Checking if the url matches url for SignUp page
     cy.url().should('eq', 'https://qa-practical-test.myshopify.com/account/register')
-   
+
     //Checking if the header "Creating account" is visible
     cy.get('div[class="customer register"] h1')
       .should('be.visible')
 
-      //Entering data into "First name" field
+    //Entering data into "First name" field
     cy.get('#RegisterForm-FirstName')
-    .should('be.visible')
-    .and('have.attr', 'placeholder', 'First name')
-    .type('BonJovi')
+      .should('be.visible')
+      .and('have.attr', 'placeholder', 'First name')
+      .type('BonJovi')
 
-  //Entering data into "Last name" field
-  cy.get('#RegisterForm-LastName')
-    .should('be.visible')
-    .and('have.attr', 'placeholder', 'Last name')
-    .type('LucaToni')
+    //Entering data into "Last name" field
+    cy.get('#RegisterForm-LastName')
+      .should('be.visible')
+      .and('have.attr', 'placeholder', 'Last name')
+      .type('LucaToni')
 
   })
 
   it('Testing SignUp functionality with invalid data (used data)', () => {
-    
-
     //Entering an randomly generated email address into "Email" field 
     cy.get('#RegisterForm-email')
       .should('be.visible')
@@ -63,16 +60,16 @@ describe('Testing SignUp functionality', () => {
       .contains('Create')
       .click()
 
-      /* **IMPORTANT**
+    /* **IMPORTANT**
       this part could fail because in some cases captcha is activated and it is required to finish SignUp process.
-      */
+    */
     cy.get('.form__message')
       .should('be.visible')
       .contains('Please adjust the following:')
   })
 
   it('Testing SignUp functionality with blank mandatory field', () => {
-    
+
     //Leaving email field blank to test mandatory field validation
     //No data is entered in the Email field
 
@@ -88,12 +85,11 @@ describe('Testing SignUp functionality', () => {
       .contains('Create')
       .click()
 
-      /* **IMPORTANT**
+    /* **IMPORTANT**
       this part could fail because in some cases captcha is activated and it is required to finish SignUp process.
-      */
-      cy.get('a[href="#RegisterForm-email"]')
+    */
+    cy.get('a[href="#RegisterForm-email"]')
       .should('be.visible')
       .contains("Email can't be blank")
-   
   })
 })

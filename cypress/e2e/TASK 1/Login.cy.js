@@ -42,21 +42,20 @@ describe('Test Login functionality', () => {
       .and('contain.text', 'Sign in')
       .click()
 
-      /*Checking url after successful Login; 
-      **IMPORTANT**
+    /*Checking url after successful Login; 
+    **IMPORTANT**
       this part could fail because in some cases captcha is activated and it is required to finish SignIn process.
-      */
-      cy.url().should('eq', 'https://qa-practical-test.myshopify.com/account')
+    */
+    cy.url().should('eq', 'https://qa-practical-test.myshopify.com/account')
 
-      // Checking the "Account" header is visible
-      cy.get('div[class="customer account"] div h1')
+    // Checking the "Account" header is visible
+    cy.get('div[class="customer account"] div h1')
       .should('be.visible')
       .contains('Account')
 
-      //Check if the log out button is visible
-      cy.get('a[href="/account/logout"]')
+    //Check if the log out button is visible
+    cy.get('a[href="/account/logout"]')
       .should('be.visible')
       .contains('Log out')
-
   })
 })
